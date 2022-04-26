@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AddAddressActivity">
+
+    <LinearLayout
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar"
+            android:id="@+id/toolbar"/>
+
+        <TextView
+            android:fontFamily="@font/poppins_semi_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:text="Add an Address,"
+            android:textColor="#3a3a3a"
+            android:textSize="@dimen/twenty_two_sp" />
+
+        <TextView
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginBottom="@dimen/twenty_dp"
+            android:text="Enter your address information"
+            android:textSize="@dimen/sixteen_sp" />
+
+        <!-- house name/ name -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:clipChildren="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@drawable/input_backgrond"
+                android:paddingStart="@dimen/ten_dp"
+                android:paddingEnd="@dimen/ten_dp">
+
+
+                <ImageView
+                    android:id="@+id/user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_location"
+                    app:tint="#707070" />
+
+
+                <EditText
+                    android:textSize="@dimen/sixteen_sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/userHouseNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifty_five_dp"
+                    android:layout_toEndOf="@id/user"
+                    android:inputType="text" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty_five_dp"
+                android:background="@color/white"
+                android:text="House name/number"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue" />
+        </FrameLayout>
+
+        <!-- street name/ number -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:clipChildren="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@drawable/input_backgrond"
+                android:paddingStart="@dimen/ten_dp"
+                android:paddingEnd="@dimen/ten_dp">
+
+
+                <ImageView
+                    android:id="@+id/phone_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_location"
+                    app:tint="#707070" />
+
+
+                <EditText
+                    android:textSize="@dimen/sixteen_sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/userStreetNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifty_five_dp"
+                    android:layout_toEndOf="@id/phone_ic"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty_five_dp"
+                android:background="@color/white"
+                android:text="Street name/number"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue" />
+        </FrameLayout>
+
+        <!--  city town -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:clipChildren="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@drawable/input_backgrond"
+                android:paddingStart="@dimen/ten_dp"
+                android:paddingEnd="@dimen/ten_dp">
+
+
+                <ImageView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_location"
+                    app:tint="#707070" />
+
+
+                <EditText
+                    android:textSize="@dimen/sixteen_sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/userCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifty_five_dp"
+                    android:layout_toEndOf="@id/email"
+                    android:inputType="text" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty_five_dp"
+                android:background="@color/white"
+                android:text="City/Town"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue" />
+        </FrameLayout>
+
+        <!-- locality -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:clipChildren="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@drawable/input_backgrond"
+                android:paddingStart="@dimen/ten_dp"
+                android:paddingEnd="@dimen/ten_dp">
+
+
+                <ImageView
+                    android:id="@+id/locality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_location"
+                    app:tint="#707070" />
+
+
+                <EditText
+                    android:textSize="@dimen/sixteen_sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/userLocality"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifty_five_dp"
+                    android:layout_toEndOf="@id/locality"
+                    android:inputType="text" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty_five_dp"
+                android:background="@color/white"
+                android:text="Locality"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue" />
+        </FrameLayout>
+
+        <!--  state -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:clipChildren="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@drawable/input_backgrond"
+                android:paddingStart="@dimen/ten_dp"
+                android:paddingEnd="@dimen/ten_dp">
+
+
+                <ImageView
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_location"
+                    app:tint="#707070" />
+
+
+                <EditText
+                    android:textSize="@dimen/sixteen_sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/userState"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifty_five_dp"
+                    android:layout_toEndOf="@id/state"
+                    android:inputType="text" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty_five_dp"
+                android:background="@color/white"
+                android:text="State"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue" />
+        </FrameLayout>
+
+        <!-- zip code -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:clipChildren="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@drawable/input_backgrond"
+                android:paddingStart="@dimen/ten_dp"
+                android:paddingEnd="@dimen/ten_dp">
+
+
+                <ImageView
+                    android:id="@+id/zip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_location"
+                    app:tint="#707070" />
+
+
+                <EditText
+                    android:textSize="@dimen/sixteen_sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/userZip"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifty_five_dp"
+                    android:layout_toEndOf="@id/zip"
+                    android:inputType="number" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty_five_dp"
+                android:background="@color/white"
+                android:text="Zip Code"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue" />
+        </FrameLayout>
+
+        <!-- Country -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:clipChildren="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@drawable/input_backgrond"
+                android:paddingStart="@dimen/ten_dp"
+                android:paddingEnd="@dimen/ten_dp">
+
+
+                <ImageView
+                    android:id="@+id/country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_location"
+                    app:tint="#707070" />
+
+
+                <EditText
+                    android:textSize="@dimen/sixteen_sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/userCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifty_five_dp"
+                    android:layout_toEndOf="@id/country"
+                    android:inputType="text" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty_five_dp"
+                android:background="@color/white"
+                android:text="Country"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fill all Fields"
+            android:textColor="@android:color/holo_red_dark"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:id="@+id/errorMsg"
+            android:visibility="gone"
+            android:layout_margin="@dimen/ten_dp"/>
+
+        <Button
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="@dimen/sixteen_sp"
+            android:id="@+id/addAddressBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty_five_dp"
+            android:layout_margin="@dimen/twenty_dp"
+            android:text="Add Address"
+            android:textColor="@color/white"
+            android:textAllCaps="false" />
+
+
+        <TextView
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginBottom="@dimen/ten_dp"
+            android:text="© Kisaan Factory All Rights Reserve"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+</ScrollView>

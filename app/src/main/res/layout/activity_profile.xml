@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ProfileActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:layout_marginTop="@dimen/thirty_dp"
+        android:layout_marginEnd="@dimen/twenty_dp"
+        android:clipChildren="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:background="@drawable/input_backgrond"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingEnd="@dimen/ten_dp">
+
+
+            <ImageView
+                android:id="@+id/user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_person_24"
+                app:tint="#474747" />
+
+
+            <TextView
+                android:fontFamily="@font/poppins_regular"
+                android:paddingStart="@dimen/twenty_dp"
+                android:paddingEnd="@dimen/twenty_dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_sp"
+                android:gravity="center_vertical"
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty_five_dp"
+                android:layout_toEndOf="@id/user"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:textSize="@dimen/twelve_sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_five_dp"
+            android:background="@color/white"
+            android:text="Full Name"
+            android:textAlignment="center"
+            android:textColor="@color/light_blue" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:layout_marginEnd="@dimen/twenty_dp"
+        android:clipChildren="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:background="@drawable/input_backgrond"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingEnd="@dimen/ten_dp">
+
+
+            <ImageView
+                android:id="@+id/userE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_email_24"
+                app:tint="#474747" />
+
+
+            <TextView
+                android:fontFamily="@font/poppins_regular"
+                android:paddingStart="@dimen/twenty_dp"
+                android:paddingEnd="@dimen/twenty_dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_Dp"
+                android:gravity="center_vertical"
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty_five_dp"
+                android:layout_toEndOf="@id/userE"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:textSize="@dimen/twelve_sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_five_dp"
+            android:background="@color/white"
+            android:text="Email Address"
+            android:textAlignment="center"
+            android:textColor="@color/light_blue" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:layout_marginEnd="@dimen/twenty_dp"
+        android:clipChildren="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:background="@drawable/input_backgrond"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingEnd="@dimen/ten_dp">
+
+
+            <ImageView
+                android:id="@+id/userP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_phone_24"
+                app:tint="#474747" />
+
+
+            <TextView
+                android:fontFamily="@font/poppins_regular"
+                android:paddingStart="@dimen/twenty_dp"
+                android:paddingEnd="@dimen/twenty_dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_Dp"
+                android:gravity="center_vertical"
+                android:id="@+id/userPhone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty_five_dp"
+                android:layout_toEndOf="@id/userP"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:textSize="@dimen/twelve_sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_five_dp"
+            android:background="@color/white"
+            android:text="Phone Number"
+            android:textAlignment="center"
+            android:textColor="@color/light_blue" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="@dimen/one_two_one_dp"
+        android:layout_height="@dimen/one_two_one_dp"
+        android:layout_marginStart="@dimen/fifty_five_dp"
+        android:layout_marginTop="@dimen/fifty_five_dp"
+        android:layout_marginEnd="@dimen/fifty_five_dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:srcCompat="@drawable/splash_logo_user" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/errorMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:text="TextView"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout5" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Noti_light_gray"
+    android:orientation="vertical"
+    tools:context=".Fragments.PaymentFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/five_dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/ten_dp">
+
+            <TextView
+                android:id="@+id/txt_totalbalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Total Wallet Balance"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fourteen_sp" />
+
+            <TextView
+                android:id="@+id/totalPaymentTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_totalbalance"
+                android:layout_toLeftOf="@+id/tv_add_money"
+                android:text="₹ 0,000.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/thirty_two_sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_add_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_bottom_sheet_handle"
+                android:paddingLeft="@dimen/twelve_dp"
+                android:paddingTop="@dimen/ten_dp"
+                android:paddingRight="@dimen/twelve_dp"
+                android:paddingBottom="@dimen/ten_dp"
+                android:text="Add Money"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sixteen_sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten_dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Payment History"
+                android:textColor="@color/blue_primary"
+                android:textSize="@dimen/fourteen_sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/ten_dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Today"
+                android:textColor="@color/blue_primary"
+                android:textSize="@dimen/fourteen_sp" />
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/payments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:layout_marginBottom="@dimen/twenty_dp" />
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

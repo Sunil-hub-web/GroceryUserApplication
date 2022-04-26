@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Kisaan and Factory User</string>
+    <string name="sign_up"><u>Sign Up</u></string>
+    <string name="sign_in"><u>Sign In</u></string>
+    <string name="terms">Terms &amp; Condition</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="facebook_app_id">502045204328502</string>
+    <string name="fb_login_protocol_scheme">fb502045204328502</string>
+    <string name="welcome">Welcome to Kisaan-factory, your number one-stop solution for all your day-to-day needs.</string>
+
+    <string name="dashboard">Dashboard</string>
+    <string name="supplier">Supplier</string>
+    <string name="Cart">Cart</string>
+    <string name="orders">Orders</string>
+    <string name="product_listing">Product Listing</string>
+    <string name="payment_history">Payment History</string>
+    <string name="my_account">My Account</string>
+
+    <string-array name="nav_drawer_labels">
+        <item>@string/dashboard</item>
+        <item>@string/Cart</item>
+        <item>@string/orders</item>
+        <item>@string/product_listing</item>
+        <item>@string/payment_history</item>
+        <item>@string/my_account</item>
+
+
+    </string-array>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+
+    <string name="action_archive">Archive</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_toggle">Toggle Layout Manager</string>
+</resources>

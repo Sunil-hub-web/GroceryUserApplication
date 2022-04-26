@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="My Address"/>
+    <item android:title="My Orders"/>
+    <item android:title="My Favourites"/>
+    <item android:title="My Cart"/>
+    <item android:title="My Wallet"/>
+    <item android:title="Chat Board"/>
+    <item android:title="Notification"/>
+    <item android:title="About Us"/>
+    <item android:title="Privacy Policies"/>
+    <item android:title="Terms &amp; Conditions"/>
+</menu>

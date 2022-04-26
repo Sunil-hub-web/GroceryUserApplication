@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="@dimen/twenty_dp"
+    tools:context=".Activities.ConfirmationActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="center"
+        android:src="@drawable/confirm_order"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:layout_gravity="center"
+        android:textSize="@dimen/twenty_five_sp"
+        android:layout_width="wrap_content"
+        android:text="Confirmation"
+        android:textColor="@color/blue_primary"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:textSize="@dimen/sixteen_sp"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:text="You have Successfully \n Completed your Payment Procedure"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/refNo"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:layout_gravity="center"
+        android:textSize="@dimen/sixteen_sp"
+        android:layout_width="wrap_content"
+        android:text="Your Reference Number is "
+        android:textColor="#F5A31C"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:onClick="continueShopping"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/one_hundred_dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="@dimen/sixteen_sp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/fifty_five_dp"
+        android:text="Continue Shopping"
+        android:backgroundTint="#F5A31C"/>
+</LinearLayout>

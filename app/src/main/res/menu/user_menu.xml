@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/side_profile"
+        android:title="My Profile"
+        android:icon="@drawable/ic_baseline_person_24"/>
+    <item
+        android:id="@+id/side_address"
+        android:icon="@drawable/ic_side_address"
+        android:title="My Address" />
+    <item
+        android:id="@+id/side_orders"
+        android:icon="@drawable/ic_side_order"
+        android:title="My Orders" />
+    <item
+        android:id="@+id/side_favorites"
+        android:icon="@drawable/ic_side_favorite"
+        android:title="My Favourites" />
+    <item
+        android:id="@+id/side_cart"
+        android:icon="@drawable/ic_side_cart"
+        android:title="My Cart" />
+    <item
+        android:id="@+id/side_wallet"
+        android:icon="@drawable/ic_side_wallet"
+        android:title="Payment History" />
+    <item
+        android:id="@+id/side_chat"
+        android:icon="@drawable/ic_side_chat_board"
+        android:title="Chat Board" />
+    <item
+        android:id="@+id/side_notification"
+        android:icon="@drawable/ic_side_notification"
+        android:title="Notification" />
+    <item
+        android:id="@+id/side_about_us"
+        android:icon="@drawable/ic_side_about_us"
+        android:title="About Us" />
+    <item
+        android:id="@+id/side_policy"
+        android:icon="@drawable/ic_side_policy"
+        android:title="Privacy Policies" />
+    <item
+        android:id="@+id/side_terms"
+        android:icon="@drawable/ic_side_terms_condition"
+        android:title="Terms &amp; Conditions" />
+    <item
+        android:id="@+id/side_logout"
+        android:icon="@drawable/ic_logout_24"
+        android:title="Logout" />
+</menu>

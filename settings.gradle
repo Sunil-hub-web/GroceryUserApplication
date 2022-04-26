@@ -1,0 +1,2 @@
+include ':app', ':recyclerview-swipedecorator'
+rootProject.name = "Grocery User Application"

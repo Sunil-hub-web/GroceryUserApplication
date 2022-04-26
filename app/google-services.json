@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1004040720480",
+    "project_id": "kissan-factory",
+    "storage_bucket": "kissan-factory.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004040720480:android:c1dba510f8ad7f54903305",
+        "android_client_info": {
+          "package_name": "com.kissanfactory.groceryuserapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004040720480-8n54r0b1l7mpstvf9n8ivka1bqnl3k4f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kissanfactory.groceryuserapplication",
+            "certificate_hash": "853c5e206e816f18fad32ce375f23522dddb0e6c"
+          }
+        },
+        {
+          "client_id": "1004040720480-nor1o1mrg3sfq7b8acg3tm3p0qe3i04m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYzombykuT7Nojj9kyezM4DYkGKiwUem8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004040720480-nor1o1mrg3sfq7b8acg3tm3p0qe3i04m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/twenty_dp">
+
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_layer_14" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_height="@dimen/twenty_five_dp"
+                android:layout_width="wrap_content"
+                android:text="Alert"
+                android:textColor="#000"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/twenty_five_dp"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_width="wrap_content"
+                android:text="To Access this Please Login"
+                android:textSize="@dimen/eighteen_sp" />
+
+
+            <LinearLayout
+                android:layout_height="@dimen/fourty_dp"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/noBtn"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:layout_height="@dimen/fourty_dp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/twenty_sp" />
+
+                <TextView
+                    android:id="@+id/yesBtn"
+                    android:background="@color/blue_primary"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/fourty_dp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/twenty_sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+

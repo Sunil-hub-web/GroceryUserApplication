@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_primary">#003567</color>
+    <color name="light_blue">#0A22A1</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#EEEEEE</color>
+    <color name="extralight_gray">#EEEEEE</color>
+    <color name="Noti_light_gray">#E5E5E5</color>
+
+    <color name="recycler_view_item_swipe_right_background">#FF0000</color>
+    <color name="recycler_view_item_swipe_left_background">#00BB00</color>
+</resources>

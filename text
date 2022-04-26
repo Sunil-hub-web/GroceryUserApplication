@@ -1,0 +1,48 @@
+https://www.figma.com/file/OiFTsNgnwz0rsqt0Tg3lgC/Kissan---User-%7C-Vendor-%7C-Warehose?node-id=0%3A1
+https://developer.zendesk.com/documentation/classic-web-widget-sdks/support-sdk/android/nutshell/
+
+razzor ppay
+
+Test key :- rzp_test_c7QnPWINfG4tCC
+
+Credential: infokisaanfactory@gmail.com
+Pass: Raj@1980
+
+16-09-21
+
+1. Remove side menu (code + layouts).
+2. Create new side menu design and related views.
+3. session manage on side menu.
+4. login session re-arrange on menu.
+
+17-09-21
+
+1. home screen dummy list with items show.
+2. toolbar change according to design.
+3. cart screen design.
+
+20-09-21
+1. toolbar title manage according to side menu + bottom view item click.
+2. toolbar notification icon redirection.
+3. Notification screen crash resolved.
+4. notification screen design and swipe library implement each item.
+5. payment screen design done.
+6. orders list screen design and api data manage (image issue resolved).
+7. home screen vegitable, fruits etc. image issue resolved from api (all category images show).
+8. product description slider images issue resolved (images shows and slider working).
+9. order details image issue resolved.
+10. cart screen image issue resolved.
+
+21/09/21-24/09/21
+
+1. product details screen design and api implement.
+2. Search api changes and issue resolved.
+3. home:- top category design and api implement.
+4. home:- top category view all click api implement, issue resolved and design.
+5. other functionality and validation issues resolved.
+6. payment history api-1 api implement.
+
+21-02-22
+user app:-
+1. search issue resolved.
+2.

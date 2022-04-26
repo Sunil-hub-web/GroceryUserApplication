@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:theme="@style/ToolbarTheme"
+    android:id="@+id/new_toolbar"
+    android:layout_height="?attr/actionBarSize">
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/ten_dp"
+        android:background="@drawable/ic_menu"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/light_blue"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:fontFamily="@font/poppins_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/light_blue"
+        android:textSize="@dimen/eighteen_sp"
+        android:text="dgsdgsdfdfs"
+        android:layout_marginLeft="@dimen/ten_dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/menu_icon"
+        android:id="@+id/tb_title"/>
+
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/ten_dp"
+        android:background="@drawable/ic_bell"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/light_blue"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

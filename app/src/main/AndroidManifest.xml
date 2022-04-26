@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kissanfactory.groceryuserapplication">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".Activities.MyApplication"
+
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/circle_logo"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/Theme.GroceryUserApplication"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:theme,android:usesCleartextTraffic"
+
+        tools:targetApi="m">
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity android:name=".Activities.TrackOrderActivity"/>
+        <activity android:name=".Activities.Razzorpy_Payment_Activity"/>
+        <activity android:name=".Activities.DeliveryAgentActivity" />
+        <activity
+            android:name=".Activities.MyLocationDemoActivity"
+            android:screenOrientation="sensorPortrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.  -->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+        <!-- Add your API key here -->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_8QwxwLMAETEiyG"
+            />
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <activity
+            android:name=".Activities.MiniOrderDetailActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.OrderDetailsActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.CreateOrderActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.AboutUsActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.SearchActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.TestPaymentActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.ProductDetailActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.AddAddressActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.AllCategoriesActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.ForgotPasswordOTPActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.RegistrationOTPActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.DeliveryAddressActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.CartActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.ConfirmationActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.BillingDetailsActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.FavoritesActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.ProfileActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.NotificationActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.CategoryDetailActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.PrivacyPolicyActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.WelcomeActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.ChangePasswordActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.ForgotPasswordActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.RegisterActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:screenOrientation="sensorPortrait" />
+
+        <activity
+            android:name=".Activities.SplashScreenActivity"
+            android:screenOrientation="sensorPortrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.MainActivity"
+            android:screenOrientation="sensorPortrait" />
+
+        <service
+            android:name=".fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+
+                <category android:name="com.opera.mini.native" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/drawable/ic_add.xml" value="0.137" />
+        <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_cart_new.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/cart_item.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/dialog_log_out.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/fragment_dash_board.xml" value="0.17314814814814813" />
+        <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/nav_header_main.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/menu/bottom_nav_menu.xml" value="0.22" />
+        <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/menu/dashboard_action_menu.xml" value="0.22083333333333333" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/drawable/bg_rec_with_shadow.xml" value="0.20104166666666667" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/drawable/border_background.xml" value="0.20104166666666667" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/drawable/drawer_outline.xml" value="0.20104166666666667" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/drawable/faceboob_btn.xml" value="0.20104166666666667" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/drawable/ic_add.xml" value="0.20104166666666667" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/drawable/ic_delete.xml" value="0.20104166666666667" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/drawable/ic_refresh_white_24dp.xml" value="0.20104166666666667" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/drawable/ic_remove.xml" value="0.20104166666666667" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_add_address.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_all_categories.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_billing_details.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_cart.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_cart_new.xml" value="0.21" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_category_detail.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_change_password.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_confirmation.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_delivery_address.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_forgot_password.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_forgot_password_o_t_p.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_login.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_main.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_mini_order_detail.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_notification.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_order_details.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_product_detail.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_profile.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_razzorpay_payment.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_search.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_select__payment__method_.xml" value="0.22" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_splash_screen.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_test_payment.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_track_order.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/activity_welcome.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/all_categories_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/cart_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/category_detail_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/category_grid_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/dashboard_category_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/fragment_chat_board.xml" value="0.2" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/fragment_dash_board.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/fragment_orders.xml" value="0.18205128205128204" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/fragment_payment.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/item_address.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/mini_order_items.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/nav_header_main.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/new_toolbar.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/notification_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/order_listing_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/orders_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/payment_card.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/topcategory_heading_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/topcategory_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/layout/view_list_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18489583333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
