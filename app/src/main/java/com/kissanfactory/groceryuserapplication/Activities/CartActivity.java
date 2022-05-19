@@ -37,6 +37,7 @@ import com.kissanfactory.groceryuserapplication.UserSingleton;
 import com.kissanfactory.groceryuserapplication.WebServices.UserApiToJsonHandler;
 import com.google.gson.Gson;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -130,6 +131,9 @@ public class CartActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<PaymentCreateDto> call, Response<PaymentCreateDto> response) {
                 if (response.isSuccessful()) {
+
+                    String payamount = String.valueOf(totalNum);
+
                     dialog.dismiss();
                     if (response.code() == 200) {
                         vPayment_ID = response.body().getPayment().getId() != null ? response.body().getPayment().getId() : "";
@@ -137,12 +141,15 @@ public class CartActivity extends AppCompatActivity {
 
                         Intent intent = new Intent(CartActivity.this, Razzorpy_Payment_Activity.class);
                         intent.putExtra("Fullname", vFullname);
-                        intent.putExtra("Amount", vAmount);
+                        intent.putExtra("Amount", payamount);
                         intent.putExtra("payment_id", vPayment_ID);
                         intent.putExtra("razorpay_order_id", vOrder_Id);
                         intent.putExtra("address_id", addressId);
                         startActivity(intent);
                         finish();
+
+                        Log.d("finalamount", String.valueOf(vAmount));
+
                     } else {
                         Toast.makeText(CartActivity.this, response.body().getMsg().toString(), Toast.LENGTH_SHORT).show();
                     }
@@ -155,6 +162,8 @@ public class CartActivity extends AppCompatActivity {
             public void onFailure(Call<PaymentCreateDto> call, Throwable t) {
 
                 dialog.dismiss();
+
+                Toast.makeText(CartActivity.this, ""+t, Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -283,9 +292,9 @@ public class CartActivity extends AppCompatActivity {
         });
     }
 
-    public void cart_Total(double Total, String name) {
+   /* public void cart_Total(double Total, String name) {
         vAmount = Total;
-    }
+    }*/
 
 
     // show hide cart
@@ -442,6 +451,10 @@ public class CartActivity extends AppCompatActivity {
 
         }
         //  this.discount.setText("₹" + discountNum);
+
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+        totalNum = Float.valueOf(decimalFormat.format(totalNum));
+
         this.total.setText("₹" + totalNum);
         this.shipping.setText("FREE");
         // this.payable.setText("₹" + (totalNum - discountNum));

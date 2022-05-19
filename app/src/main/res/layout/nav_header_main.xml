@@ -42,12 +42,12 @@
                     <ImageView
                         android:id="@+id/imgLogo"
                         android:layout_width="@dimen/one_hundred_dp"
-                        android:layout_height="@dimen/one_hundred_dp"
+                        android:layout_height="@dimen/one_two_one_dp"
                         android:layout_centerInParent="true"
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/five_dp"
                         android:scaleType="centerInside"
-                        android:src="@drawable/splash_logo_user" />
+                        android:src="@drawable/finallogo" />
 
 
                     <ImageView
@@ -79,7 +79,7 @@
                         android:layout_height="@dimen/payu_dimen_50dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/payu_dimen_20dp"
-                        android:background="@drawable/circle_logo" />
+                        android:background="@drawable/finallogo" />
 
                     <LinearLayout
                         android:layout_width="match_parent"

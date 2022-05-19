@@ -10,20 +10,57 @@ android {
         applicationId "com.kissanfactory.groceryuserapplication"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 5
-        versionName "1.4"
+        versionCode 11
+        versionName "2.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        resConfigs "en", "fr"
+        signingConfig signingConfigs.debug
     }
+
+    lint {
+        // Turns off checks for the issue IDs you specify.
+        disable 'TypographyFractions','TypographyQuotes'
+        // Turns on checks for the issue IDs you specify. These checks are in
+        // addition to the default lint checks.
+        enable 'RtlHardcoded','RtlCompat', 'RtlEnabled'
+        // To enable checks for only a subset of issue IDs and ignore all others,
+        // list the issue IDs with the 'check' property instead. This property overrides
+        // any issue IDs you enable or disable using the properties above.
+        checkOnly 'NewApi', 'InlinedApi'
+        // If set to true, turns off analysis progress reporting by lint.
+        quiet true
+        // If set to true (default), stops the build if errors are found.
+        abortOnError false
+        // If true, only report errors.
+        ignoreWarnings true
+        // If true, lint also checks all dependencies as part of its analysis. Recommended for
+        // projects consisting of an app with library dependencies.
+        checkDependencies true
+
+        baseline file("lint-baseline.xml")
+
+        checkReleaseBuilds false
+
+    }
+
 
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
-            minifyEnabled true
+           /* signingConfig signingConfigs.debug*/
+            minifyEnabled false
+
+            //shrinkResources true
+
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
+
+        }
+        debug {
+            debuggable true
         }
     }
     compileOptions {
@@ -33,6 +70,7 @@ android {
 }
 
 dependencies {
+
     implementation 'com.github.aabhasr1:OtpView:v1.1.2'
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.0.0'

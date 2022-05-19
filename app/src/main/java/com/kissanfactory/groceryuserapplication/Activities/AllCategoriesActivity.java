@@ -54,6 +54,7 @@ public class AllCategoriesActivity extends AppCompatActivity {
 
 
     private void getAllCategories(){
+
         Call<ApiResponse> call = new UserApiToJsonHandler().getCategories();
         call.enqueue(new Callback<ApiResponse>() {
             @Override
@@ -75,14 +76,24 @@ public class AllCategoriesActivity extends AppCompatActivity {
     }
 
     private void showAllCategories(List<Category> catList){
-        AllCategoriesAdapter adapter = new AllCategoriesAdapter(this, catList);
 
-        allCategories = findViewById(R.id.allCategories);
+        try{
 
-        allCategories.setAdapter(adapter);
-        allCategories.setOnItemClickListener((adapterView, view, i, l) -> startActivity(new Intent(AllCategoriesActivity.this, CategoryDetailActivity.class)
-        .putExtra("category", catList.get(i).getId())
-        .putExtra("name", catList.get(i).getName())));
+            AllCategoriesAdapter adapter = new AllCategoriesAdapter(this, catList);
+
+            allCategories = findViewById(R.id.allCategories);
+
+            allCategories.setAdapter(adapter);
+
+            allCategories.setOnItemClickListener((adapterView, view, i, l) -> startActivity(new Intent(AllCategoriesActivity.this, CategoryDetailActivity.class)
+                    .putExtra("category", catList.get(i).getId())
+                    .putExtra("name", catList.get(i).getName())));
+
+        }catch (Exception e){
+
+            e.printStackTrace();
+        }
+
     }
 
     @Override

@@ -11,10 +11,10 @@
         android:id="@+id/toolbar"/>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:layout_below="@id/toolbar"
-        android:layout_width="match_parent"
         android:id="@+id/swipeLayout"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="wrap_content"
@@ -23,24 +23,24 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/allAddresses"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
         </androidx.core.widget.NestedScrollView>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:onClick="addNewAddress"
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_add"
-        app:fabSize="mini"
-        app:tint="@color/white"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/ten_dp"
         android:layout_marginBottom="@dimen/sixty_dp"
-        android:layout_marginEnd="@dimen/ten_dp"/>
+        android:onClick="addNewAddress"
+        android:src="@drawable/ic_add"
+        app:fabSize="mini"
+        app:tint="@color/white" />
 
 
 

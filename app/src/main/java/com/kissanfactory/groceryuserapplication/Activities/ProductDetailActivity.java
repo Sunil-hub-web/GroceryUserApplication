@@ -64,6 +64,27 @@ public class ProductDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product_detail);
 
         init();
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (quantityNum < stock) {
+                    quantityNum += 1;
+                    quantity.setText(String.valueOf(quantityNum));
+                }
+            }
+        });
+
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (quantityNum > 1) {
+                    quantityNum -= 1;
+                    quantity.setText(String.valueOf(quantityNum));
+                }
+            }
+        });
     }
 
     private void init() {
@@ -95,27 +116,6 @@ public class ProductDetailActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             title.setText("Product Description");
         }
-
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (quantityNum < stock) {
-                    quantityNum += 1;
-                    quantity.setText(String.valueOf(quantityNum));
-                }
-            }
-        });
-        minus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (quantityNum > 1) {
-                    quantityNum -= 1;
-                    quantity.setText(String.valueOf(quantityNum));
-                }
-            }
-        });
-
-
         getDetails();
     }
 

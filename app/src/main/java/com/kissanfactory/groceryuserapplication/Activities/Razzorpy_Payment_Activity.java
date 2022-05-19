@@ -54,19 +54,26 @@ public class Razzorpy_Payment_Activity extends AppCompatActivity implements Paym
     }
 
     private void init() {
+
         toolbar = findViewById(R.id.toolbar);
         tv_pay = findViewById(R.id.tv_pay);
         SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
         token = sharedPreferences.getString("token", "");
+
         if (getIntent() != null) {
+
             vPayment_ID = getIntent().getStringExtra("payment_id");
             addressId = getIntent().getStringExtra("address_id");
             vOrder_Id = getIntent().getStringExtra("razorpay_order_id");
             vFullname = getIntent().getStringExtra("Fullname");
-            vAmount = String.valueOf(getIntent().getDoubleExtra("Amount", 0));
+            vAmount = getIntent().getStringExtra("Amount");
+
             System.out.println("aadadd..." + vAmount + "\n" + vOrder_Id + "\n" + addressId);
-            vAmount_f = 400;
             userSingleton = UserSingleton.getInstance();
+            vAmount_f = Math.round(Float.parseFloat(vAmount) * 100);
+
+            Log.d("sunilamount", ""+String.valueOf(vAmount_f));
+
         }
 
         tv_pay.setOnClickListener(new View.OnClickListener() {
@@ -93,43 +100,41 @@ public class Razzorpy_Payment_Activity extends AppCompatActivity implements Paym
 
     public void startPayment() {
 
-        /**
-         * Instantiate Checkout
-         */
+        final Activity activity = this;
+
         Checkout checkout = new Checkout();
 
-        // checkout.setKeyID("rzp_test_c7QnPWINfG4tCC"); test mode
+       // checkout.setKeyID("rzp_test_c7QnPWINfG4tCC");
         checkout.setKeyID("rzp_live_8QwxwLMAETEiyG");
-        /**
-         * Set your logo here
-         */
-        checkout.setImage(R.drawable.splash_image);
 
-        /**
-         * Reference to current activity
-         */
-        final Activity activity = this;
+        checkout.setImage(R.drawable.splash_image);
 
         try {
             JSONObject options = new JSONObject();
+
             options.put("name", vFullname);
             options.put("description", "Charges");
             options.put("send_sms_hash", true);
             options.put("allow_rotation", true);
-            options.put("order_id", vOrder_Id);
-            options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
+           // options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
             options.put("currency", "INR");
-            options.put("amount", vAmount);
+            options.put("amount", vAmount_f);
+            //options.put("amount", 500);
 
             JSONObject preFill = new JSONObject();
+
             preFill.put("email", userSingleton.getEmail());
             preFill.put("contact", userSingleton.getMobile());
             options.put("prefill", preFill);
+
             JSONObject retryObj = new JSONObject();
+
             retryObj.put("enabled", true);
             retryObj.put("max_count", 4);
             options.put("retry", retryObj);
+
             checkout.open(activity, options);
+
         } catch (Exception e) {
             Toast.makeText(activity, "Error in payment: " + e.getMessage(), Toast.LENGTH_LONG)
                     .show();

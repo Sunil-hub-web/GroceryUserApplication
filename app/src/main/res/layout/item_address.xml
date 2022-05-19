@@ -57,17 +57,17 @@
     </LinearLayout>
 
     <Button
-        android:fontFamily="@font/poppins_medium"
-        android:textSize="@dimen/sixteen_sp"
-        android:layout_marginStart="@dimen/thirty_dp"
-        android:layout_marginEnd="@dimen/thirty_dp"
         android:id="@+id/makeDefault"
-        android:layout_below="@id/addressDetails"
-        android:layout_marginTop="@dimen/twenty_dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/sixty_dp"
+        android:layout_below="@id/addressDetails"
+        android:layout_marginStart="@dimen/thirty_dp"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:layout_marginEnd="@dimen/thirty_dp"
         android:background="@color/blue_primary"
+        android:fontFamily="@font/poppins_medium"
         android:text="Deliver to this address"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textAllCaps="false"/>
+        android:textSize="@dimen/sixteen_sp" />
 </RelativeLayout>

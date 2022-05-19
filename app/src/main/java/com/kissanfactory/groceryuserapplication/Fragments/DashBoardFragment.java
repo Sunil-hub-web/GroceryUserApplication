@@ -64,11 +64,6 @@ public class DashBoardFragment extends Fragment {
 
     private SharedPreferences sharedPreferences;
 
-    public DashBoardFragment() {
-        // Required empty public constructor
-    }
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +81,9 @@ public class DashBoardFragment extends Fragment {
                 init(view);
             }
         });
+
         init(view);
+
         return view;
     }
 
@@ -97,9 +94,14 @@ public class DashBoardFragment extends Fragment {
         fruitsHolder = view.findViewById(R.id.houseHolder);
         snackHolder = view.findViewById(R.id.snackHolder);
 
+        try {
+            getSlideShow(view);
+            searchBox(view);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        getSlideShow(view);
-        searchBox(view);
+
         categories = view.findViewById(R.id.categoriesList);
         vegProducts = view.findViewById(R.id.vegProducts);
         snackProducts = view.findViewById(R.id.snackProduct);
@@ -419,18 +421,24 @@ public class DashBoardFragment extends Fragment {
 
     // get the slide show images
     private void getSlideShow(View view) {
-        ImageCarousel carousel = view.findViewById(R.id.carousel);
-        carousel.setAutoPlay(true);
+
+        ImageCarousel carousel = view.findViewById(R.id.carousel1);
         Call<SlideShowResponse> call = new UserApiToJsonHandler().getSlideShow();
+
         call.enqueue(new Callback<SlideShowResponse>() {
             @Override
             public void onResponse(Call<SlideShowResponse> call, Response<SlideShowResponse> response) {
+
                 if (response.isSuccessful()) {
+
                     List<CarouselItem> imgUrls = new ArrayList<>();
-//                    Log.d("Slideshow", response.body().getData().toString());
+
+                    Log.d("sunilSlideshow", response.body().getData().toString());
+
                     for (SlideShow slideShow : response.body().getData()) {
                         imgUrls.add(new CarouselItem(slideShow.getImages().get(0)));
                     }
+
                     // pass the images string into the carousel
                     carousel.addData(imgUrls);
                 }
@@ -441,10 +449,13 @@ public class DashBoardFragment extends Fragment {
 
             }
         });
+
+        carousel.setAutoPlay(true);
     }
 
     // search box
     private void searchBox(View view) {
+
         EditText search = view.findViewById(R.id.productSearchBox);
 
         TextView.OnEditorActionListener actionListener = new TextView.OnEditorActionListener() {

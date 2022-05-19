@@ -40,6 +40,7 @@ public class CategoryDetailsAdapter extends RecyclerView.Adapter<CategoryDetails
 
     private List<Product> productList;
     private Activity context;
+    ProgressDialog dialog;
 
     public CategoryDetailsAdapter(Activity context) {
         this.context = context;
@@ -66,7 +67,7 @@ public class CategoryDetailsAdapter extends RecyclerView.Adapter<CategoryDetails
 
             if (context.getSharedPreferences("UserData", MODE_PRIVATE).getBoolean("exist", false)) {
 
-                ProgressDialog dialog = new ProgressDialog(context);
+                dialog = new ProgressDialog(context);
                 dialog.setCancelable(false);
                 dialog.setMessage("Please Wait");
                 dialog.setTitle("Adding to cart");
@@ -98,6 +99,8 @@ public class CategoryDetailsAdapter extends RecyclerView.Adapter<CategoryDetails
                 });
 
             } else {
+
+                dialog.dismiss();
                 Toast.makeText(context, "Login to Add to cart", Toast.LENGTH_SHORT).show();
             }
         });

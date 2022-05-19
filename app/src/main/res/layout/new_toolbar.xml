@@ -11,25 +11,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_margin="@dimen/ten_dp"
-        android:background="@drawable/ic_menu"
         android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:layout_marginBottom="@dimen/ten_dp"
+        android:background="@drawable/ic_menu"
         android:backgroundTint="@color/light_blue"
         android:visibility="visible" />
 
 
     <TextView
-        android:fontFamily="@font/poppins_medium"
+        android:id="@+id/tb_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/light_blue"
-        android:textSize="@dimen/eighteen_sp"
-        android:text="dgsdgsdfdfs"
-        android:layout_marginLeft="@dimen/ten_dp"
         android:layout_centerVertical="true"
-        android:gravity="center"
+        android:layout_marginLeft="@dimen/ten_dp"
         android:layout_toRightOf="@+id/menu_icon"
-        android:id="@+id/tb_title"/>
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="dgsdgsdfdfs"
+        android:textColor="@color/light_blue"
+        android:textSize="@dimen/eighteen_sp" />
 
     <ImageView
         android:id="@+id/notification_icon"

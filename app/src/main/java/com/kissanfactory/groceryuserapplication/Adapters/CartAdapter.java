@@ -80,7 +80,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 //            imageLoader.displayImage(urlS,holder.prodImg);
 //            Glide.with(context).load(urlS).into(holder.prodImg);
             Picasso.get().load(urlS).into(holder.prodImg);
-            (CartActivity.cartActivity).cart_Total(cartList.get(position).getItem().getPrice(),cartList.get(position).getItem().getTitle().toString());
+            //(CartActivity.cartActivity).cart_Total(cartList.get(position).getItem().getPrice(),cartList.get(position).getItem().getTitle().toString());
 
             holder.discountPrice.setPaintFlags(holder.discountPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         }

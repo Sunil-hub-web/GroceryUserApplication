@@ -5,7 +5,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="light_gray">#EEEEEE</color>
-    <color name="extralight_gray">#EEEEEE</color>
+    <color name="extralight_gray">#3E3D3D</color>
     <color name="Noti_light_gray">#E5E5E5</color>
 
     <color name="recycler_view_item_swipe_right_background">#FF0000</color>

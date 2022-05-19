@@ -74,21 +74,33 @@ public class AddAddressActivity extends AppCompatActivity {
         country = findViewById(R.id.userCountry);
         addAddressBtn = findViewById(R.id.addAddressBtn);
         addAddressBtn.setOnClickListener(view -> createNewAddress());
+
+        double lat = getIntent().getDoubleExtra("lat",0);
+        double longi = getIntent().getDoubleExtra("long", 0);
+
+        Log.d("latlngsunil",String.valueOf(lat));
+
         if(getIntent().getDoubleExtra("lat",0)>0){
+
             getLocationFromMap();
+
         }else{
+
             getEditInfo();
         }
     }
 
     // get location from latlng
     private void getLocationFromMap(){
+
         Intent data = getIntent();
         Geocoder geocoder;
         List<android.location.Address> addresses = null;
         geocoder = new Geocoder(this, Locale.getDefault());
         double lat = data.getDoubleExtra("lat",0);
         double longi = data.getDoubleExtra("long", 0);
+
+        Log.d("latlngsunil",String.valueOf(lat));
         try {
             addresses = geocoder.getFromLocation(lat, longi, 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
         } catch (IOException e) {
@@ -121,9 +133,13 @@ public class AddAddressActivity extends AppCompatActivity {
 
     // checking if its edit page
     private void getEditInfo(){
+
+        Toast.makeText(this, "getEditInfo", Toast.LENGTH_SHORT).show();
+
         address = new Address();
         try {
             Address address = getIntent().getParcelableExtra("address");
+
             zip.setText(address.getZip());
             country.setText(address.getCountry());
             streetNo.setText(address.getStreet());
@@ -132,6 +148,9 @@ public class AddAddressActivity extends AppCompatActivity {
             houseNo.setText(address.getHouse());
             city.setText(address.getCity());
             this.address = address;
+
+            Toast.makeText(this,(address.getZip()+""+address.getCountry()), Toast.LENGTH_SHORT).show();
+
 
             Validator validator = new Validator();
             addAddressBtn.setText("Update Address");
@@ -246,7 +265,9 @@ public class AddAddressActivity extends AppCompatActivity {
 
     // creating the address object
     private Address createAddress(){
+
         Address address = new Address();
+
         address.setCity(editToString(city));
         address.setCountry(editToString(country));
         address.setHouse(editToString(houseNo));
@@ -257,8 +278,9 @@ public class AddAddressActivity extends AppCompatActivity {
 
         if (getIntent().getDoubleExtra("lat",0)>0){
             // get lat and long from map
-            address.setLatitude(String.valueOf(getIntent().getDoubleExtra("lat",0)));
-            address.setLongitude(String.valueOf(getIntent().getDoubleExtra("long",0)));
+            address.setLatitude(getIntent().getDoubleExtra("lat",0));
+            address.setLongitude(getIntent().getDoubleExtra("long",0));
+
         }else{
             // get lat and long from the existing address
             Address oldAddress = getIntent().getParcelableExtra("address");

@@ -256,6 +256,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
+
         if (new Validator().validInputs(password, phoneNum)) {
             ProgressDialog dialog = new ProgressDialog(this);
             dialog.setTitle("Logging in");

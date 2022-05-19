@@ -21,8 +21,8 @@ public class Address implements Parcelable {
     private int zip;
     private String house;
     private String street;
-    private String latitude;
-    private String longitude;
+    private Double latitude;
+    private Double longitude;
 
     public Address() {
     }
@@ -36,8 +36,8 @@ public class Address implements Parcelable {
         country = in.readString();
         house = in.readString();
         zip = in.readInt();
-        latitude = in.readString();
-        longitude = in.readString();
+        latitude = in.readDouble();
+        longitude = in.readDouble();
     }
 
     public static final Creator<Address> CREATOR = new Creator<Address>() {
@@ -52,7 +52,7 @@ public class Address implements Parcelable {
         }
     };
 
-    public void setLatitude(String latitude) {
+    /*public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
 
@@ -66,6 +66,22 @@ public class Address implements Parcelable {
 
     public String getLongitude() {
         return longitude;
+    }*/
+
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 
     public String getId() {
@@ -168,7 +184,7 @@ public class Address implements Parcelable {
         parcel.writeString(country);
         parcel.writeString(house);
         parcel.writeInt(zip);
-        parcel.writeString(latitude);
-        parcel.writeString(longitude);
+        parcel.writeDouble(latitude);
+        parcel.writeDouble(longitude);
     }
 }

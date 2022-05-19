@@ -56,7 +56,6 @@
         android:name="com.kissanfactory.groceryuserapplication.FragmentNavigationDrawer"
         android:layout_width="280dp"
         android:theme="@style/NavigationStyle"
-
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:layout="@layout/nav_header_main"

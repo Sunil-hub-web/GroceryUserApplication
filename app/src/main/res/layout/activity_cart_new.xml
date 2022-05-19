@@ -314,9 +314,9 @@
                             android:layout_marginRight="@dimen/ten_dp"
                             android:layout_toLeftOf="@+id/txt_change"
                             android:background="@null"
+                            android:fontFamily="@font/poppins_regular"
                             android:hint="Type Coupon Code"
                             android:singleLine="true"
-                            android:fontFamily="@font/poppins_regular"
                             android:textColor="@color/black"
                             android:textSize="@dimen/fifteen_sp" />
 

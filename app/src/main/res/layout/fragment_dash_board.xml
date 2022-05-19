@@ -100,6 +100,7 @@
             </LinearLayout>
 
             <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/carousel1"
                 app:showTopShadow="false"
                 app:showBottomShadow="false"
                 app:carouselBackground="@android:color/transparent"
@@ -116,7 +117,7 @@
                 app:autoWidthFixing="true"
                 app:showNavigationButtons="false"
                 app:carouselType="BLOCK"
-                android:id="@+id/carousel"/>
+                />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_top_products"
