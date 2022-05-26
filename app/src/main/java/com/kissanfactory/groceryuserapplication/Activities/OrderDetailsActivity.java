@@ -142,7 +142,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
                     getAllSimilarOrders(response.body().getData());
                 }else{
                     dialog.dismiss();
-                    Toast.makeText(OrderDetailsActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OrderDetailsActivity.this, "success", Toast.LENGTH_SHORT).show();
                 }
             }
 
