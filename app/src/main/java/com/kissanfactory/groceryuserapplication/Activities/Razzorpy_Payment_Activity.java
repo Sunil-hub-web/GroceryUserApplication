@@ -196,6 +196,11 @@ public class Razzorpy_Payment_Activity extends AppCompatActivity implements Paym
 
         vRazorpay_payment_id = s.toString();
         payment_check_status(signature);
+
+        /*Intent intent = new Intent(Razzorpy_Payment_Activity.this,CreateOrderActivity.class);
+        startActivity(intent);*/
+
+
     }
 
     @Override

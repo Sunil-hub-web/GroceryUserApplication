@@ -107,7 +107,10 @@ public class CartActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                create_checkout();
+                //create_checkout();
+
+                Intent intent = new Intent(CartActivity.this,CreateOrderActivity.class);
+                startActivity(intent);
             }
         });
     }
