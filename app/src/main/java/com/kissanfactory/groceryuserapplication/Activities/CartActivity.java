@@ -23,6 +23,17 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkResponse;
+import com.android.volley.NoConnectionError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.TimeoutError;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.kissanfactory.groceryuserapplication.Adapters.CartAdapter;
 import com.kissanfactory.groceryuserapplication.Models.Address;
 import com.kissanfactory.groceryuserapplication.Models.ApiResponse;
@@ -36,10 +47,16 @@ import com.kissanfactory.groceryuserapplication.R;
 import com.kissanfactory.groceryuserapplication.UserSingleton;
 import com.kissanfactory.groceryuserapplication.WebServices.UserApiToJsonHandler;
 import com.google.gson.Gson;
+import com.kissanfactory.groceryuserapplication.session_manager.SessionManager;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -53,6 +70,9 @@ public class CartActivity extends AppCompatActivity {
     private boolean hasDefault;
 
     private RecyclerView productsList;
+
+    SessionManager sessionManager;
+    List<Cart> cartList;
 
     // cart details
     private TextView total, discount, shipping, payable, noItemsTv;
@@ -68,7 +88,9 @@ public class CartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart_new);
         cartActivity = this;
+        sessionManager = new SessionManager(CartActivity.this);
         init();
+
     }
 
     private void init() {
@@ -107,10 +129,10 @@ public class CartActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //create_checkout();
+                //String payamount = String.valueOf(totalNum);
+                int pay_amount = (int) totalNum;
 
-                Intent intent = new Intent(CartActivity.this,CreateOrderActivity.class);
-                startActivity(intent);
+                payment_history_create(vFullname,pay_amount,vCartid);
             }
         });
     }
@@ -125,7 +147,7 @@ public class CartActivity extends AppCompatActivity {
         UserSingleton userSingleton = UserSingleton.getInstance();
         Checkout_Create_Pojo checkout_create_pojo = new Checkout_Create_Pojo();
         checkout_create_pojo.setFirstName(userSingleton.getName());
-        checkout_create_pojo.setAmount(300.0);
+        //checkout_create_pojo.setAmount(300.0);
         checkout_create_pojo.setCartId(vCartid);
 
 
@@ -145,9 +167,8 @@ public class CartActivity extends AppCompatActivity {
                         Intent intent = new Intent(CartActivity.this, Razzorpy_Payment_Activity.class);
                         intent.putExtra("Fullname", vFullname);
                         intent.putExtra("Amount", payamount);
-                        intent.putExtra("payment_id", vPayment_ID);
-                        intent.putExtra("razorpay_order_id", vOrder_Id);
                         intent.putExtra("address_id", addressId);
+                        intent.putExtra("cart_id", vCartid);
                         startActivity(intent);
                         finish();
 
@@ -170,6 +191,130 @@ public class CartActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void payment_history_create(String FirstName,int amount,String cartId){
+
+        SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
+        String token = sharedPreferences.getString("token", "");
+
+        String url = "https://kisaanandfactory.com/api/v1/userapp/payment/payment_history/create";
+
+        ProgressDialog progressDialog = new ProgressDialog(CartActivity.this);
+        progressDialog.setMessage("payment history create");
+        progressDialog.show();
+
+        JSONObject jsonObject = new JSONObject();
+
+        try {
+
+            jsonObject.put("FirstName",FirstName);
+            jsonObject.put("amount",amount);
+            jsonObject.put("cartId",cartId);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject, new com.android.volley.Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+
+                progressDialog.dismiss();
+                try {
+
+                    String code = response.getString("code");
+                    String msg = response.getString("msg");
+                    String payment = response.getString("payment");
+                    String data = response.getString("data");
+
+                    if(code.equals("200")){
+
+                        Toast.makeText(CartActivity.this, msg, Toast.LENGTH_SHORT).show();
+
+                        JSONObject jsonObject_payment = new JSONObject(payment);
+
+                        String payment_id = jsonObject_payment.getString("_id");
+                       /* String user_id = jsonObject_payment.getString("user_id");
+                        String cart_id = jsonObject_payment.getString("cart_id");
+                        String amount = jsonObject_payment.getString("amount");*/
+
+                        JSONObject jsonObject_data = new JSONObject(data);
+
+                        String order_id = jsonObject_data.getString("id");
+                       /* String entity = jsonObject_payment.getString("entity");
+                        String amount_paid = jsonObject_payment.getString("amount_paid");
+                        String amount_due = jsonObject_payment.getString("amount_due");*/
+
+                        //payment_history_checkstatus(payment_id,order_id,pay_id,signature);
+
+                        String payamount = String.valueOf(totalNum);
+
+                        Intent intent = new Intent(CartActivity.this, Razzorpy_Payment_Activity.class);
+                        intent.putExtra("Fullname", vFullname);
+                        intent.putExtra("Amount", payamount);
+                        intent.putExtra("address_id", addressId);
+                        intent.putExtra("cart_id", vCartid);
+                        intent.putExtra("orderid", order_id);
+                        intent.putExtra("payment_id", payment_id);
+                        startActivity(intent);
+                        finish();
+
+                    }else{
+
+                        Toast.makeText(CartActivity.this, "payment history not create", Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new com.android.volley.Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                progressDialog.dismiss();
+                Log.e("onErrorResponse", error.toString());
+                if (error instanceof TimeoutError || error instanceof NoConnectionError) {
+
+                    Toast.makeText(getApplicationContext(), "Please check Internet Connection", Toast.LENGTH_SHORT).show();
+
+                } else {
+
+                    Log.d("successresponceVolley", "" + error.networkResponse.statusCode);
+                    Log.d("successresponceVolley", "" + error.networkResponse);
+                    NetworkResponse networkResponse = error.networkResponse;
+                    if (networkResponse != null && networkResponse.data != null) {
+                        try {
+                            String jError = new String(networkResponse.data);
+                            JSONObject jsonError = new JSONObject(jError);
+
+                            String data = jsonError.getString("msg");
+                            Toast.makeText(CartActivity.this, data, Toast.LENGTH_SHORT).show();
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Log.d("successresponceVolley", "" + e);
+                        }
+
+                    }
+
+                }
+            }
+        }){
+
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+
+                Map<String,String> header = new HashMap<>();
+                header.put("auth-token",token);
+                return header;
+            }
+        };
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(30000,3,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        RequestQueue requestQueue = Volley.newRequestQueue(CartActivity.this);
+        requestQueue.add(jsonObjectRequest);
+
     }
 
     // get profileinfo
@@ -215,7 +360,7 @@ public class CartActivity extends AppCompatActivity {
                     if (response.body().getCartItems() != null) {
                         showHideCart(true);
                         CartItems cartItems = response.body().getCartItems();
-                        List<Cart> cartList = new ArrayList<>();
+                        cartList = new ArrayList<>();
                         for (Cart cart : cartItems.getCart()) {
                             if (cart.getItem() != null) {
                                 cartList.add(cart);
@@ -487,4 +632,5 @@ public class CartActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

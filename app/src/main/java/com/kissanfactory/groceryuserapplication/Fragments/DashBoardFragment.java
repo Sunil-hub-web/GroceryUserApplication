@@ -362,6 +362,7 @@ public class DashBoardFragment extends Fragment {
                         }
 
                         view.setLayoutManager(layoutManager);
+
                     } else {
                         // hide that category
 //                        holder..setVisibility(View.GONE);

@@ -327,4 +327,16 @@
                 android:textSize="@dimen/sixteen_sp"></TextView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/showalldata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/payu_dimen_20dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Choose your\npayment method"
+        android:textColor="@color/black"
+        android:textSize="@dimen/eighteen_sp" />
+
+
 </LinearLayout>

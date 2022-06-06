@@ -274,9 +274,15 @@ public class LoginActivity extends AppCompatActivity {
                         // open main activity
                         saveSharedPrefs(response.body().getToken());
                         dialog.dismiss();
+
+                        //Long str_mobile = response.body().getUserData().getMobile();
+
+                        //sessionManager.setMobileNo(str_mobile);
+
                         startActivity(new Intent(LoginActivity.this, MainActivity.class)
                                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                         LoginActivity.this.finish();
+
                     } else {
                         dialog.dismiss();
                         Gson gson = new Gson();

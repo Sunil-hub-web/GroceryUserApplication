@@ -291,6 +291,7 @@ public class MainActivity extends AppCompatActivity implements FragmentNavigatio
 
     // show not logged in alert
     private void showAlert() {
+
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.pop_up_alert);
 

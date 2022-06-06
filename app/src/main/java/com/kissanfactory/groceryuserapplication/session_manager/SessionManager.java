@@ -73,6 +73,17 @@ public class SessionManager {
         return deviceToken;
     }
 
+    /*public void setMobileNo(Long vName) {
+        this.editor.putString(USER_NAME, vName);
+        editor.commit();
+    }
+
+    public String getMobileNo() {
+
+        String deviceToken = preferences.getString(USER_NAME, "");
+        return deviceToken;
+    }*/
+
     public void setFCM_TOKEN(String vFCM_TOKEN) {
         this.editor.putString(FCM_TOKEN, vFCM_TOKEN);
         editor.commit();

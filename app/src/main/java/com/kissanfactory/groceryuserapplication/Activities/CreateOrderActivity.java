@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.kissanfactory.groceryuserapplication.Models.ApiResponse;
@@ -33,6 +34,9 @@ public class CreateOrderActivity extends AppCompatActivity {
     private float historyTotal = 0;
     String token;
     ProgressDialog dialog;
+
+    String mobile1 = "79787406383";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,15 +59,23 @@ public class CreateOrderActivity extends AppCompatActivity {
         Bundle myBundle = getIntent().getExtras();
 
         try {
+
             address = myBundle.getString("address");
             transactionId = myBundle.getString("transaction");
             name = myBundle.getString("firstname");
             mobile = myBundle.getLong("mobile");
             historyTotal = myBundle.getFloat("total");
+
+            Log.d("ggsxyuh",address+","+transactionId+","+name+","+mobile);
+
         }catch (NullPointerException e){
 
+            e.printStackTrace();
         }
 
+        address = getIntent().getStringExtra("address");
+
+        mobile = Long.valueOf(mobile1);
 
         createOrders();
     }
@@ -78,12 +90,14 @@ public class CreateOrderActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     // display all the cart items
                     makeOrderFromCart(response.body().getCartItems());
+
+                    Log.d("hvgsytga",response.body().getCartItems().get_id());
+
                 }else{
                     dialog.dismiss();
                     Toast.makeText(CreateOrderActivity.this, "Cant fetch cart", Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onFailure(Call<ApiResponse> call, Throwable t) {
                 dialog.dismiss();
@@ -118,6 +132,9 @@ public class CreateOrderActivity extends AppCompatActivity {
                 // make product
                 Product product = new Product();
                 product.setId(cart.getItem().getId());
+
+                Log.d("hgkjkjhskh",cart.getItem().getId());
+
                 product.setProductId();
                 List<String> images = new ArrayList<>();
                 images.add(cart.getItem().getImages().get(0));
@@ -151,14 +168,14 @@ public class CreateOrderActivity extends AppCompatActivity {
                     }
                     order.setOrderStatus("ordered");
                     order.setDiscountPrice(cart.getItem().getDiscount() * cart.getItem().getPrice()/100);
-                    order.setShippingName(name);
+                    order.setShippingName("sunil");
                     order.setShippindAddressID(address);
                     order.setShippingContact(mobile);
                     order.setPaymentStatus("paid");
                     order.setShippingCharge(1);
                     order.setPaymentMethod("debitCard");
                     order.setProducts(products);
-                    order.setCartId(transactionId);
+                    order.setCartId(cart.getItem().getId());
                     orders.add(order);
                 }
             }

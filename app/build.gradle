@@ -1,6 +1,5 @@
 plugins {
     id 'com.android.application'
-
 }
 
 android {
@@ -121,6 +120,8 @@ dependencies {
     // google sign in
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
 
+    implementation 'com.android.volley:volley:1.2.1'
+
     // facebook sign in
     implementation 'com.facebook.android:facebook-login:[8,9)'
 //    implementation 'com.facebook.android:facebook-android-sdk:5.15.5'
@@ -130,7 +131,5 @@ dependencies {
 
     ////razzor pay
     implementation 'com.razorpay:checkout:1.6.12'
-//    implementation(name: 'razorpay-amazonpay-1.3.0', ext: 'aar')
-//    implementation(name: 'PayWithAmazon', ext: 'aar')
 }
 apply plugin: 'com.google.gms.google-services'
