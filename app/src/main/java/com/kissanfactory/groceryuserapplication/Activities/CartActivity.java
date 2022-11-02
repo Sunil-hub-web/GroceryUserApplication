@@ -63,6 +63,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class CartActivity extends AppCompatActivity {
+
     public static CartActivity cartActivity;
     private Toolbar toolbar;
     private NestedScrollView container;
@@ -577,8 +578,8 @@ public class CartActivity extends AppCompatActivity {
             if (cart.getItem() != null) {
                 if (cart.getItem().getType().equals("product")) {
                     // gst from experience
-                    gst = Float.parseFloat(cart.getItem().getExperience());
-                    gst = (gst / 100) * (total_Amount * cart.getQuantity());
+                    //gst = Float.parseFloat(cart.getItem().getExperience());
+                    gst = (18 / 100) * (total_Amount * cart.getQuantity());
 
                 } else {
                     // gst from weight

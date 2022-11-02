@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.os.CountDownTimer;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -23,6 +24,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.kissanfactory.groceryuserapplication.Activities.AllCategoriesActivity;
 import com.kissanfactory.groceryuserapplication.Activities.CategoryDetailActivity;
 import com.kissanfactory.groceryuserapplication.Activities.SearchActivity;
@@ -45,6 +49,8 @@ import com.google.gson.Gson;
 import org.imaginativeworld.whynotimagecarousel.CarouselItem;
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,12 +63,14 @@ import static android.content.Context.MODE_PRIVATE;
 public class DashBoardFragment extends Fragment {
 
     private RecyclerView categories, vegProducts, snackProducts, houseProducts, fruitProducts, rv_top_products;
-    private TextView viewAllCat, viewAllVeg, viewAllFruits, viewAllHouse, viewAllSnacks;
+    private TextView viewAllCat, viewAllVeg, viewAllFruits, viewAllHouse, viewAllSnacks,setTimer;
     private List<Favourite> favourites;
     private RelativeLayout fruitsHolder, vegHolder, snackHolder, houseHolder;
     SwipeRefreshLayout swipeRefreshLayout;
 
     private SharedPreferences sharedPreferences;
+
+    ImageSlider vegetable_ImageSlider,frutes_ImageSlider;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -75,6 +83,7 @@ public class DashBoardFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_dash_board, container, false);
         swipeRefreshLayout = view.findViewById(R.id.swipeLayout);
+        setTimer = view.findViewById(R.id.setTimer);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -84,6 +93,47 @@ public class DashBoardFragment extends Fragment {
 
         init(view);
 
+        vegetable_ImageSlider = view.findViewById(R.id.vegetable_ImageSlider);
+
+        List<SlideModel> imageList = new ArrayList<SlideModel>();
+
+        imageList.add(new SlideModel(R.drawable.images_1, ScaleTypes.FIT));
+
+
+
+        imageList.add(new SlideModel(R.drawable.images_2, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.images_3, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.images_4, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.images_5, ScaleTypes.CENTER_CROP));
+
+        vegetable_ImageSlider.setImageList(imageList);
+
+        frutes_ImageSlider = view.findViewById(R.id.frutes_ImageSlider);
+
+        List<SlideModel> imageList1 = new ArrayList<SlideModel>();
+
+        imageList1.add(new SlideModel(R.drawable.image_6, ScaleTypes.FIT));
+        imageList1.add(new SlideModel(R.drawable.images_7, ScaleTypes.CENTER_CROP));
+        imageList1.add(new SlideModel(R.drawable.image_8, ScaleTypes.CENTER_CROP));
+        imageList1.add(new SlideModel(R.drawable.image_9, ScaleTypes.CENTER_CROP));
+        imageList1.add(new SlideModel(R.drawable.apple_1, ScaleTypes.CENTER_CROP));
+
+        frutes_ImageSlider.setImageList(imageList1);
+
+        new CountDownTimer(60000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                // Used for formatting digit to be in 2 digits only
+                NumberFormat f = new DecimalFormat("00");
+                long hour = (millisUntilFinished / 3600000) % 24;
+                long min = (millisUntilFinished / 60000) % 60;
+                long sec = (millisUntilFinished / 1000) % 60;
+                setTimer.setText(f.format(hour) + ":" + f.format(min) + ":" + f.format(sec));
+            }
+            // When the task is over it will print 00:00:00 there
+            public void onFinish() {
+                setTimer.setText("00:00:00");
+            }
+        }.start();
         return view;
     }
 
@@ -496,6 +546,4 @@ public class DashBoardFragment extends Fragment {
             }
         });
     }
-
-
 }

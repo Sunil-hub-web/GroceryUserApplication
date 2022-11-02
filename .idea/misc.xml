@@ -15,6 +15,7 @@
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_main.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_order_details.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_product_detail.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_profile.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_razzorpay_payment.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_register.xml" value="0.1984375" />
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
@@ -34,6 +35,7 @@
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/menu/dashboard_action_menu.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/menu/order_action_menu.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/menu/user_menu.xml" value="0.22083333333333333" />
+        <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.115" />
         <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/drawable/bg_rec_with_shadow.xml" value="0.20104166666666667" />
         <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/drawable/border_background.xml" value="0.20104166666666667" />
         <entry key="..\:/Tushar sir/Kisaan_Factory_User-master/app/src/main/res/drawable/drawer_outline.xml" value="0.20104166666666667" />
@@ -91,7 +93,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

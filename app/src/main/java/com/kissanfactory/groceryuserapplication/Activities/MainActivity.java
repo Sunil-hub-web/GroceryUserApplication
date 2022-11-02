@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity implements FragmentNavigatio
         if (loggedIn()) {
             // there is user
 
-            sideBaraddress.setVisibility(View.VISIBLE);
+            sideBaraddress.setVisibility(View.GONE);
             img_user.setVisibility(View.VISIBLE);
             String token = sharedPreferences.getString("token", "");
             System.out.println("token:-......" + token);

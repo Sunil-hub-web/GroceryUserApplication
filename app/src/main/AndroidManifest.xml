@@ -15,9 +15,9 @@
         android:name=".Activities.MyApplication"
 
         android:allowBackup="true"
-        android:icon="@drawable/app_logo"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/finallogo"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:hardwareAccelerated="true"
         android:theme="@style/Theme.GroceryUserApplication"
@@ -134,7 +134,8 @@
 
         <activity
             android:name=".Activities.SplashScreenActivity"
-            android:screenOrientation="sensorPortrait">
+            android:screenOrientation="sensorPortrait"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -150,7 +151,6 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
-
                 <category android:name="com.opera.mini.native" />
             </intent-filter>
         </service>

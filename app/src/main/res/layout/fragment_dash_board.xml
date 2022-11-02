@@ -119,6 +119,102 @@
                 app:carouselType="BLOCK"
                 />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:layout_marginBottom="@dimen/ten_dp">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Morning Essentials"
+                        android:textColor="@color/blue_primary"
+                        android:textSize="@dimen/twenty_sp" />
+
+                    <TextView
+                        android:id="@+id/viewAllCat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/view_all_backgroung"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingStart="@dimen/twelve_dp"
+                        android:paddingTop="@dimen/five_dp"
+                        android:paddingEnd="@dimen/twelve_dp"
+                        android:paddingBottom="@dimen/five_dp"
+                        android:text="view all"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/twelve_sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/setTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Morning Essentials"
+                    android:textColor="@color/blue_primary"
+                    android:textSize="@dimen/twenty_sp"
+                    android:layout_marginLeft="@dimen/twenty_dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/vegetable_ImageSlider"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        app:iss_auto_cycle="true"
+                        app:iss_corner_radius="5"
+                        app:iss_period="1000"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/frutes_ImageSlider"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:iss_auto_cycle="true"
+                        app:iss_corner_radius="19"
+                        app:iss_period="1000"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_top_products"
                 android:layout_width="match_parent"

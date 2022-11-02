@@ -16,15 +16,15 @@ public class ConfirmationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmation);
 
-        getTransactionId();
+       // getTransactionId();
     }
 
     // getting the transaction id
-    private void getTransactionId(){
+   /* private void getTransactionId(){
         String transaction = getIntent().getStringExtra("transaction");
         TextView transIdView = findViewById(R.id.refNo);
         transIdView.setText("Your Transaction ID is: \n"+ transaction);
-    }
+    }*/
 
     public void continueShopping(View view){
         startActivity(new Intent(this, MainActivity.class)

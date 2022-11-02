@@ -56,7 +56,7 @@ public class Razzorpy_Payment_Activity extends AppCompatActivity implements Paym
     private String addressId = "", token = "", vFullname = "", vCartid = "", vPayment_ID = "", vOrder_Id = "", vAmount = "", vRazorpay_payment_id = "",
             signature,pay_id;
     UserSingleton userSingleton;
-    int vAmount_f;
+    String vAmount_f;
     TextView showalldata;
 
     @Override
@@ -96,10 +96,13 @@ public class Razzorpy_Payment_Activity extends AppCompatActivity implements Paym
             //vOrder_Id = getIntent().getStringExtra("order_id");
             vPayment_ID = getIntent().getStringExtra("payment_id");
 
+            Log.d("sunilamount1", ""+String.valueOf(vAmount));
+
             System.out.println("aadadd..." + vAmount + "\n" + vOrder_Id + "\n" + addressId);
 
             userSingleton = UserSingleton.getInstance();
-            vAmount_f = Math.round(Float.parseFloat(vAmount) * 100);
+            //vAmount_f = Math.round(Float.parseFloat(vAmount) * 1);
+            vAmount_f = vAmount;
 
             Log.d("sunilamount", ""+String.valueOf(vAmount_f));
 
@@ -583,6 +586,8 @@ public class Razzorpy_Payment_Activity extends AppCompatActivity implements Paym
 
             Log.d("sunilallresponse",razorpay_payment_id + "\n" + razorpay_order_id + "\n" + payment_id + "\n" + razorpay_signature + "\n" + cartId + "\n" + AddressId + "\n" + paymentMethod);
 
+            System.out.println("sunilall......" + razorpay_payment_id + "\n" + razorpay_order_id + "\n" + payment_id + "\n" + razorpay_signature + "\n" + cartId + "\n" + AddressId + "\n" + paymentMethod);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -605,6 +610,9 @@ public class Razzorpy_Payment_Activity extends AppCompatActivity implements Paym
                     if(code.equals("200")){
 
                         Toast.makeText(Razzorpy_Payment_Activity.this, "Data Add SuccessFully", Toast.LENGTH_SHORT).show();
+
+                        startActivity(new Intent(Razzorpy_Payment_Activity.this, ConfirmationActivity.class)
+                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
 
                     }
 
@@ -654,8 +662,11 @@ public class Razzorpy_Payment_Activity extends AppCompatActivity implements Paym
                 return header;
             }
         };
-        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(30000,3,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(500000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         RequestQueue requestQueue = Volley.newRequestQueue(Razzorpy_Payment_Activity.this);
+        requestQueue.getCache().clear();
         requestQueue.add(jsonObjectRequest);
 
     }

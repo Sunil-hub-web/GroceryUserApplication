@@ -3,8 +3,8 @@ apply plugin: 'com.android.library'
 
 group = 'com.github.xabaras'
 
-int VERSION_CODE = 11
-String VERSION_NAME = "2.6"
+int VERSION_CODE = 14
+String VERSION_NAME = "2.9"
 
 android {
     compileSdkVersion 30
@@ -24,9 +24,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
-        }
-        debug {
-            debuggable true
         }
     }
 }

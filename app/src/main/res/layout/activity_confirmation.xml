@@ -58,4 +58,5 @@
         android:layout_height="@dimen/fifty_five_dp"
         android:text="Continue Shopping"
         android:backgroundTint="#F5A31C"/>
+
 </LinearLayout>

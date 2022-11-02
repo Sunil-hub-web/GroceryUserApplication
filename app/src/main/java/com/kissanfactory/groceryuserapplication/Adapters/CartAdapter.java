@@ -25,6 +25,7 @@ import com.squareup.picasso.Picasso;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.InputStream;
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder> {
@@ -62,15 +63,17 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     public void onBindViewHolder(@NonNull CartViewHolder holder, int position) {
         if (cartList.get(position).getItem()!=null){
 
-            float price =cartList.get(position).getItem().getPrice();
+            float price = cartList.get(position).getItem().getPrice();
             float disc_price = cartList.get(position).getItem().getDiscount();
             float total_price = price * disc_price / 100;
             float total_Amount = price - total_price;
+            DecimalFormat df = new DecimalFormat("#.##");
+            float total_Amount1 = Float.valueOf(df.format(total_Amount));
 
             String totalprice = String.valueOf(total_price);
 
             holder.discountPrice.setText("₹ "+ cartList.get(position).getItem().getPrice());
-            holder.productPrice.setText("₹ "+ total_Amount);
+            holder.productPrice.setText("₹ "+ total_Amount1);
             holder.name.setText(StringUtils.capitalize(cartList.get(position).getItem().getTitle()));
             holder.quantity.setText(String.valueOf(cartList.get(position).getQuantity()));
            // String urlS = "https://api.kisaan-factory.com/" + cartList.get(position).getItem().getImages().get(0).replace("http://13.58.30.53:3000/", "");

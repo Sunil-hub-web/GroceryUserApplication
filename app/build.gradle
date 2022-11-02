@@ -9,12 +9,12 @@ android {
         applicationId "com.kissanfactory.groceryuserapplication"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 11
-        versionName "2.6"
+        versionCode 14
+        versionName "2.9"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        resConfigs 'en', 'fr'
 
-        resConfigs "en", "fr"
         signingConfig signingConfigs.debug
     }
 
@@ -131,5 +131,10 @@ dependencies {
 
     ////razzor pay
     implementation 'com.razorpay:checkout:1.6.12'
+
+    implementation 'com.parse.bolts:bolts-tasks:1.4.0'
+
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
+
 }
 apply plugin: 'com.google.gms.google-services'
