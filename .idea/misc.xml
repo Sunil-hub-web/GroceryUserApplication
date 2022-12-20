@@ -19,6 +19,7 @@
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_razzorpay_payment.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_register.xml" value="0.1984375" />
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
+        <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_test_payment.xml" value="0.20520833333333333" />
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/activity_welcome.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/cart_item.xml" value="0.22083333333333333" />
         <entry key="..\:/New folder/Kisaan_Factory_User/Kisaan_Factory_User-master/app/src/main/res/layout/dialog_log_out.xml" value="0.22083333333333333" />
@@ -98,5 +99,8 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="SuppressKotlinCodeStyleNotification">
+    <option name="disableForAll" value="true" />
   </component>
 </project>

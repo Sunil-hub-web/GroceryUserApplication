@@ -116,7 +116,7 @@ public class DashBoardFragment extends Fragment {
         imageList1.add(new SlideModel(R.drawable.images_7, ScaleTypes.CENTER_CROP));
         imageList1.add(new SlideModel(R.drawable.image_8, ScaleTypes.CENTER_CROP));
         imageList1.add(new SlideModel(R.drawable.image_9, ScaleTypes.CENTER_CROP));
-        imageList1.add(new SlideModel(R.drawable.apple_1, ScaleTypes.CENTER_CROP));
+        //imageList1.add(new SlideModel(R.drawable.applettt, ScaleTypes.CENTER_CROP));
 
         frutes_ImageSlider.setImageList(imageList1);
 

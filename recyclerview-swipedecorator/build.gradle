@@ -3,15 +3,15 @@ apply plugin: 'com.android.library'
 
 group = 'com.github.xabaras'
 
-int VERSION_CODE = 14
-String VERSION_NAME = "2.9"
+int VERSION_CODE = 15
+String VERSION_NAME = "3.0"
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 31
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
