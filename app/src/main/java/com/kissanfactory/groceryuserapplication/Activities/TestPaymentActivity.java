@@ -14,13 +14,6 @@ import com.kissanfactory.groceryuserapplication.Models.ApiResponse;
 import com.kissanfactory.groceryuserapplication.Models.Hash;
 import com.kissanfactory.groceryuserapplication.R;
 import com.kissanfactory.groceryuserapplication.WebServices.UserApiToJsonHandler;
-import com.payu.base.models.ErrorResponse;
-import com.payu.base.models.PayUPaymentParams;
-import com.payu.checkoutpro.PayUCheckoutPro;
-import com.payu.checkoutpro.utils.PayUCheckoutProConstants;
-import com.payu.ui.model.listeners.PayUCheckoutProListener;
-import com.payu.ui.model.listeners.PayUHashGenerationListener;
-
 import java.util.HashMap;
 
 import retrofit2.Call;
@@ -35,7 +28,7 @@ public class TestPaymentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test_payment);
     }
 
-    public void payClick(View view){
+  /*  public void payClick(View view){
         PayUPaymentParams.Builder builder = new PayUPaymentParams.Builder();
         builder.setAmount("100")
                 .setIsProduction(false)
@@ -119,6 +112,6 @@ public class TestPaymentActivity extends AppCompatActivity {
                     }
                 }
         );
-    }
+    }*/
 
 }

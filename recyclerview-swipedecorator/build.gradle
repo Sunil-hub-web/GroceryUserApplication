@@ -3,8 +3,8 @@ apply plugin: 'com.android.library'
 
 group = 'com.github.xabaras'
 
-int VERSION_CODE = 15
-String VERSION_NAME = "3.0"
+int VERSION_CODE = 16
+String VERSION_NAME = "4.0"
 
 android {
     compileSdkVersion 31

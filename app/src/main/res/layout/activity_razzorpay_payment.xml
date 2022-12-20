@@ -26,7 +26,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/payu_dimen_20dp"
                 android:fontFamily="@font/poppins_semi_bold"
                 android:text="Choose your\npayment method"
                 android:textColor="@color/black"
@@ -35,7 +34,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/payu_dimen_10dp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="Select desired payment mode."
                 android:textColor="@color/black"
@@ -45,7 +43,6 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/payu_dimen_10dp"
                 android:orientation="vertical">
 
 
@@ -237,7 +234,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/payu_dimen_40dp"
+                    android:layout_marginTop="40dp"
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="center"
                     android:text="Current Method"
@@ -332,7 +329,7 @@
         android:id="@+id/showalldata"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/payu_dimen_20dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_semi_bold"
         android:text="Choose your\npayment method"
         android:textColor="@color/black"
